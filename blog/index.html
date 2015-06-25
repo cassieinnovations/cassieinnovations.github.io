@@ -1,0 +1,41 @@
+---
+layout: default
+title: Blog
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/css/nav-main.css" type="text/css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css" type="text/css">
+
+{% include nav_blog.html %}
+<div class="container-fluid blog-section" id="blog">
+  <div class="col-xs-12 col-md-10 col-md-offfset-1 intro-message">
+    <div class="row">
+      <br><br>
+      <h2>Cassie's Startup Journey</h2>
+      <h3>Co-founders Christina and Stephanie share their experiences as they create Cassie.</h3><h3>Read about how this new startup came to life and how it continues to grow.</h3> 
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="row posts">
+      {% for post in site.posts %}
+      <div class="post-item">
+        <h3>{{ post.title }}</h3>
+        <hr>
+        <h4><span class="bold">Posted by: </span> {{ post.author }} on <time datetime="{{post.date|date:'%F'}}">{{post.date|date:"%b %d, %Y"}}</time></h4>
+        <hr>
+        <p>{{ post.content }}</p>
+      </div>
+        <hr class="rocket-primary">
+        <br>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="{{ site.baseurl }}/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>

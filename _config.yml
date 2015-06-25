@@ -1,0 +1,15 @@
+# Site settings
+title: CASSIE | Forecast the Future
+email: stephanie@cassieapp.com
+description: > # this means to ignore newlines until "baseurl:"
+  Cassie is a new web app to predict the outcome of your favorite events: sports, 
+  pop culture, politics, and more. Share your forecasts with friends and earn points 
+  for correct predictions. 
+url: "http://cassieinnovations.com" # the base hostname & protocol for your site
+twitter_username: teamcassie
+github_username:  ssocias
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+timezone: America/New_York
